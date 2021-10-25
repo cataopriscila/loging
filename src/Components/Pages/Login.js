@@ -24,6 +24,10 @@ const Form = styled.form`
     >${Button}:first-of-type{
         margin-top: 4rem;
     }
+
+    >${Input}{
+        margin-top: 1.5rem;
+    }
     
 `; 
 
@@ -59,7 +63,8 @@ const Login = () => {
             <h2>Login</h2>            
             <Form onSubmit={handleSubmit}>
                 {loading? <Spinner/> :                
-                <>                
+                <>
+                <span>Have an account? Log in!</span>                
                 <Input
                  name="username"
                  type="text" 

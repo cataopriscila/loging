@@ -9,7 +9,7 @@ const HeaderWrapper = styled.header`
     position: fixed;
     top: 0;
     box-sizing: border-box;
-    display: flex;
+    display: flex;    
     padding: 0 1.5rem;    
     background-image: linear-gradient(to right,${props => props.theme.secondColor}, ${props => props.theme.firstColor});  
     border-radius: 0 0 .6rem .6rem;
@@ -17,7 +17,7 @@ const HeaderWrapper = styled.header`
     
     @media(min-width: 768px) {       
     height: 6rem;
-    }   
+    }  
 
 `;  
 
@@ -33,7 +33,8 @@ const Menu = styled.nav`
     
 
     @media(min-width: 768px) {       
-    display: flex; 
+    display: flex;
+    align-items: center; 
     gap: 1rem;   
     background: none;
     left: initial;
@@ -56,12 +57,12 @@ const Link = ({isActive, children, ...props}) => {
 
 const StyledLink = styled(Link)`
     padding: 0.4rem .8rem;
-    display: block;   
+    display: block;  
     width: 30%;
     text-align: center;
     text-decoration: none; 
     box-sizing: border-box;       
-    margin: 0 auto;    
+    margin: 0 auto 1.5rem auto;    
     border-bottom: 1px solid ${props => props.theme.fourthColor} ;
     color: ${props => props.theme.fourthColor};
     font-weight: ${props => props.isActive? 'bold' : 'normal'}; 

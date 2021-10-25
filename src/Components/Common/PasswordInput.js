@@ -5,8 +5,11 @@ import { Input } from './Input';
 const PasswordInputWrapper = styled.div`
     display: flex;
 
-    ~div{
-      margin-bottom: .8rem;  
+    +div{      
+      background-color: white;
+      border-radius: .2rem;
+      padding: .6rem;
+      display: inline-block;
     } 
 `;
 
@@ -41,8 +44,7 @@ const ToggleButton = styled.div`
 `;
 
 const PasswordInput = (props) => {
-    const [showPassword, setShowPassword] = useState(false);    
-    
+    const [showPassword, setShowPassword] = useState(false);   
 
     return (
         <>
@@ -54,9 +56,12 @@ const PasswordInput = (props) => {
             {showPassword ? 'Hide' : 'Show'}
             </ToggleButton>
         </PasswordInputWrapper>
+        {showPassword&& 
         <div>
-            {showPassword ? props.value : ''}
-        </div>     
+            {props.value}            
+        </div>
+        }
+             
                                          
         </>
     );

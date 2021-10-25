@@ -12,7 +12,6 @@ const Paragraph = styled.p`
 
 `;
 
-
 const Blog = () => {
     return (
         <PageLayout>

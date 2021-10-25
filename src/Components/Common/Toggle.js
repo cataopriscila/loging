@@ -7,9 +7,7 @@ const ToggleWrapper = styled.div`
     height: 2.1rem;
     border-radius: 2rem;
     border: 1px solid #ccc;
-    margin: auto 1rem;
-    display: block;
-    text-align: center;
+    margin: auto;      
     background-image: linear-gradient(to bottom, ${props => props.theme.firstColor}, ${props => props.theme.secondColor});
 `;
 
@@ -21,7 +19,7 @@ const Notch = styled.div`
     background: white;
     border-radius: 50%;
     transition: transform 0.1s linear;
-    transform: translate(${props => props.isActive? '2rem' : '1px'});
+    transform: translate(${props => props.isActive? '1.7rem' : '1px'});
 `;
 
 const Toggle = ({isActive, onToggle}) => {
